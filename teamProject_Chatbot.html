@@ -29,6 +29,7 @@
 <div id="chat-container"></div>
 
 <script>
+    let firstList = ['맛집', '교통', '숙소', '관광지', '날씨정보']
     $(document).ready(function() {
         const chatContainer = $('#chat-container');
         let CATEGORY_STATUS = 1;
@@ -54,30 +55,31 @@
 
             if (CATEGORY_STATUS === 1) {
                 // 상위 카테고리에 따른 응답 추가
-                if (userMessage.toLowerCase().includes('1') || userMessage.toLowerCase().includes('서울')) {
-                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
+                if (userMessage.toLowerCase().includes('1') || userMessage.toLowerCase().includes('국내')) {
+                    showSubCategories(['서울', '여수', '부산', '강릉']);
                     CATEGORY_STATUS = 2;
-                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('부산')) {
-                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
+                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('해외')) {
+                    showSubCategories(['일본', '다낭', '뉴욕', '태국']);
                     CATEGORY_STATUS = 2;
-                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('여수')) {
-                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
-                    CATEGORY_STATUS = 2;
-                } else {
+                } else if (userMessage.toLowerCase().includes('0')  || userMessage.toLowerCase().includes('상위메뉴')) {
+                    showWelcomeMessage();
+                    CATEGORY_STATUS = 1;
+                }else {
                     // 다른 키워드에 대한 기본 응답
                     setTimeout(function() {
                         appendMessage('Chatbot', '안녕하세요! 다른 도움이 필요하신가요?<br>');
                     }, 500);
                 }
-            } else if (CATEGORY_STATUS === 2) {
+            }
+            else if (CATEGORY_STATUS === 2) {
                 // 사용자가 하위 카테고리에 대해 물어보는 경우
                 const selectedCategory = userMessage.toLowerCase();
-                if (selectedCategory.includes('운동화') || selectedCategory.includes('구두') || selectedCategory.includes('일본')) {
-                    sendSubCategoryMessage(selectedCategory, ['운동화', '구두', '샌들']);
-                    showSubCategories(['운동화', '구두', '샌들']);
-                } else if (selectedCategory.includes('여성의류') || selectedCategory.includes('남성의류') || selectedCategory.includes('미국')) {
-                    sendSubCategoryMessage(selectedCategory, ['여성의류', '남성의류', '유아의류']);
-                    showSubCategories(['여성의류', '남성의류', '유아의류']);
+                if (selectedCategory.includes('1') || selectedCategory.includes('2') || selectedCategory.includes('3')|| selectedCategory.includes('4')) {
+                    sendSubCategoryMessage(selectedCategory, ['맛집', '교통', '숙소', '관광지', '날씨정보']);
+                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
+                } else if ( selectedCategory.includes('남성의류') || selectedCategory.includes('미국')) {
+                    sendSubCategoryMessage(selectedCategory, ['맛집', '교통', '숙소', '관광지', '날씨정보']);
+                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
                 } else if (userMessage === '0') {
                     showWelcomeMessage();
                     CATEGORY_STATUS = 1;
