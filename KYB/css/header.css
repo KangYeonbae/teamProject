@@ -1,0 +1,49 @@
+header{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    width: 100%;
+    padding: 40px 0;
+    background: #000;
+    transition: 0.3s;
+}
+header.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 a{
+    font-size: 2rem;
+    font-weight: bold;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    padding: 10px;
+}
+header nav ul li a{
+    font-size: 14px;
+    line-height: 56px;
+    color: #fff; text-decoration: none;
+}
+
+.bigCity{
+    position: relative;
+}
+.smallMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    }
+
+.bigCity:hover.smallMenu{
+    display: block;
+}
+
+header.sticky{position: fixed; padding: 7px 0; color: #000; background: #fff; box-shadow: 0 2px 2px rgba(0,0,0,.3)}
+header.sticky nav ul li a{color: #000000}
