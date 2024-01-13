@@ -19,6 +19,7 @@ nav{
 .sub-nav > li{
     width: 150px;
     height: 70px;
+    font-size: 1.5rem;
 }
 
 .nav-item:hover .sub-nav {

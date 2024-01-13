@@ -1,0 +1,40 @@
+section{
+    font-family: 'Poppins', sans-serif;
+    padding: 5rem 0;
+}
+section .title{
+    margin-bottom: 8rem;
+}
+section .title h3{
+    font-size: 1.35rem;
+    position: relative;
+    font-weight: bold;
+}
+section .title h2{
+    font-size: 3.5rem;
+    color: #14ADE5;
+    text-shadow : -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+section .title p{
+    font-size: 1.5rem;
+}
+
+section .about-self .left{
+    float: left;
+    width: 100%;
+}
+section .about-self .right{
+    width: 50%;
+    float: left;
+    padding: 0 2rem;
+}
+.slide_gallery{
+    margin: 0;
+    padding: 0;
+    width: 340px;
+    height: 300px;
+}
+img{
+    width: 340px;
+    height: 300px;
+}
