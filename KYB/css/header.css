@@ -1,17 +1,24 @@
 body{
     background-color: white;
 }
-h1{
+nav{
+    background: white;
+}
+.h1{
     color: wheat;
+    font-weight: bold;
     -webkit-text-stroke: 1px black;
 }
-a {
-    background-color: black;
-    color: white;
-}
+/*.nav-item {*/
+
+/*}*/
 
 .sub-nav {
     display: none;
+}
+.sub-nav > li{
+    width: 150px;
+    height: 70px;
 }
 
 .nav-item:hover .sub-nav {
@@ -24,6 +31,13 @@ a {
 
 .nav-item {
     position: relative;
+
+    color: wheat;
+    font-weight: bold;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+.nav-item > li{
+    text-align: center;
 }
 
 .nav-link {
