@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 200px; /* 초기 너비 설정 */
+            overflow: hidden; /* 초과된 내용 숨김 */
+            transition: width 0.5s ease;/* 너비 변경 애니메이션 */
+            position: relative; /* 부모 요소로부터 상대 위치 설정 */
+            border: 1px solid #ccc;
+        }
+
+        .expanded {
+            width: 800px; /* 확장된 상태의 너비 설정 */
+            height:200px;
+        }
+
+        .hidden-content {
+            display: none; /* 초기에는 내용을 숨김 */
+            position: absolute; /* 부모 요소에 상대적으로 위치 고정 */
+        }
+
+        .visible-content {
+            display: block; /* 버튼 클릭 시 내용을 보이게 함 */
+        }
+    </style>
+    <title>Expandable Box 예제</title>
+</head>
+<body>
+
+<div class="box" id="expandableBox">
+    어쩌구 저쩌구
+    <div class="hidden-content">
+        <p>많은 설명이 여기에 들어갑니다.</p>
+    </div>
+</div>
+
+<button onclick="expandBox()">더보기</button>
+
+<script>
+    function expandBox() {
+        var box = document.getElementById('expandableBox');
+        var hiddenContent = box.querySelector('.hidden-content');
+
+        // 확장된 상태로 전환
+        box.classList.toggle('expanded');
+
+        // 내용 보이기/숨기기 토글
+        hiddenContent.classList.toggle('visible-content');
+    }
+</script>
+</body>
+</html>
