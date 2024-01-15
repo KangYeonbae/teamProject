@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서울 메인</title>
+  <style>
+    #main {
+
+    }
+    #main-header {
+        text-align : center;
+    }
+    #seoul-left {
+        width : 50%;
+        float : left;
+    }
+    #seoul-left-group {
+        clear : both;
+        border : 2px solid #b23232;
+        margin : 0 40px 0 40px;
+    }
+    #seoul-left-group p {
+        text-align : center;
+        margin : -35px 0 0 0;
+        color: #ffffff;
+        background-color : #5e5e5e;
+    }
+    #seoul-right {
+        width:50%;
+        float : right;
+    }
+    #seoul-right-introduce {
+        padding-top : 100px;
+    }
+    #seoul-right-introduce p {
+        line-height: 1.3em;
+    }
+    #seoul-night {
+        clear : both;
+
+    }
+    #seoul-night img {
+        width : 100%;
+        height : 95%;
+        padding : 0 0 30px 0;
+    }
+    #seoul-weather table,th,td {
+        border : 1px solid #adadad;
+        padding : 6px 12px;
+        border-collapse: collapse;
+    }
+    .weather img {
+        width : 50px;
+    }
+    .weather td {
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div id="main">
+    <section id ="main-header">
+        <h2>서울특별시</h2>
+    </section>
+    <div id="seoul-introduce">
+        <div id="seoul-left">
+            <div id="seoul-left-group">
+                <div id="seoul-night">
+                    <img src="images/seoul-night.jpg">
+                </div>
+                <p>남한산성에서 본 서울의 야경</p>
+            </div>
+        </div>
+        <div id="seoul-right">
+            <div id="seoul-right-introduce">
+                <h3>도시에 대한 정보</h3>
+                <hr>
+                <p>서울특별시는 대한민국의 수도, 그리고 최대도시이다. 평양시, 경주시, 개성시와 함께 오랜 역사를 가진 한반도의 고도 중 하나다.<br>
+                    법률상 대한민국 제1의 도시로 규정되어 있다. 현재 한국에서 유일한 특별시고, 수장인 서울특별시장은 한국 광역자치단체장 중 유일하게 장관급 대우를 받으며 국무회의 참여권 및 발언권이 있다.<br>
+                    서울특별시는 한국 제2의 도시인 부산광역시보다도 인구가 약 3배 더 많은 명실상부한 한국의 종주도시다.</p>
+                <b>또한,</b>
+                <p>국내 관광객 기준으로나, 외국인 관광객 기준으로나 압도적으로 국내 1위의 관광도시이다.<br>
+                    서울은 경제도시, 교육도시, 문화도시, 의료도시, 행정도시일 뿐만 아니라 한국 최대의 관광도시기도 하다.<br>
+                    당장 서울을 제외한 나머지 모든 지자체를 합쳐야 서울에 방문하는 외국인 관광객 수를 넘어설 정도다.<br>
+                    물론 스키장이나 해수욕장 같은 경우는 서울에 없지만 서울과 교통으로 연결되지 않은 지역은 거의 없기 때문에<br>
+                    서울 시민이 스키나 스노보드, 해수욕을 즐기기 위한 난이도는 다른 지역에 비해서 매우 낮은 편이다.</p>
+                <hr>
+            </div>
+        </div>
+        <div id="seoul-weather">
+            <table>
+                <caption>서울의 날씨</caption>
+                <tr>
+                    <th style="color:red">1.14</th>
+                    <th>1.15</th>
+                    <th>1.16</th>
+                    <th>1.17</th>
+                    <th>1.18</th>
+                    <th>1.19</th>
+                    <th style="color:blue">1.20</th>
+                </tr>
+                <tr>
+                    <th style="color:red">일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th style="color:blue">토</th>
+                </tr>
+                <tr class="weather">
+                    <td><img src="images/sunny-rain.jpg"><br>월</td>
+                    <td><img src="images/sunny.jpg"></td>
+                    <td><img src="images/sunny.jpg"></td>
+                    <td><img src="images/cloud-sun.jpg"></td>
+                    <td><img src="images/cloud.jpg"></td>
+                    <td><img src="images/cloud2.jpg"></td>
+                    <td><img src="images/cloud-sun.jpg"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
