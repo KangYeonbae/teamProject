@@ -1,0 +1,64 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*.sliderWrap {*/
+/*    display: flex;*/
+/*    width: 300%; !* 각 이미지의 너비의 총합 (100% * 3) *!*/
+/*}*/
+
+/*.slider {*/
+/*    height: 300px;*/
+/*    flex: 1;*/
+/*}*/
+/*.slider .sliderWrap{*/
+/*    position: relative;*/
+/*}*/
+/*.slider .sliderWrap .slide{*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*}*/
+/*.slider .sliderWrap .slider:first-child{*/
+/*    display: block;*/
+/*}*/
+/*.slider .sliderWrap .slide img{*/
+/*    display: block;*/
+/*}*/
+
+/*.slide span {*/
+/*    display: block;*/
+/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sliderWrap {
+    display: flex;
+    width: 300%; /* 각 이미지의 너비의 총합 (100% * 3) */
+}
+
+.slide {
+    height: 300px;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    object-fit: scale-down ;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.slide span {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
