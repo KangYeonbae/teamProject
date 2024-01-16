@@ -13,9 +13,11 @@
             padding: 10px;
             height: 300px;
             overflow-y: scroll;
+            background: rgba(212,244,250,0.5);
         }
         #input-container {
             width: 300px;
+            height: 20px;
             margin: 10px auto;
             display: flex;
             flex-direction: column;
@@ -23,6 +25,7 @@
         #user-input {
             margin-bottom: 5px;
         }
+
     </style>
 </head>
 <body>
@@ -46,7 +49,7 @@
             appendMessage('<br>Chatbot', '<br>안녕하세요, 여행이야기입니다.' +
                 '<br>저희 여행이야기는 여행관련 자료안내사이트입니다.' +
                 '<br>어디로 떠나가볼까요?' +
-                '<p> 1. 국내<br> 2. 해외<br>');
+                '<p> 1. 서울<br> 2. 강릉<br>3. 군산<br>4. 부산');
         }
 
         // 사용자 메시지 처리 및 응답
@@ -55,11 +58,17 @@
 
             if (CATEGORY_STATUS === 1) {
                 // 상위 카테고리에 따른 응답 추가
-                if (userMessage.toLowerCase().includes('1') || userMessage.toLowerCase().includes('국내')) {
-                    showSubCategories(['서울', '여수', '부산', '강릉']);
+                if (userMessage.toLowerCase().includes('1') || userMessage.toLowerCase().includes('서울')) {
+                    showSubCategories(['서울홈', '경복궁']);
                     CATEGORY_STATUS = 2;
-                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('해외')) {
-                    showSubCategories(['일본', '다낭', '뉴욕', '태국']);
+                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('강릉')) {
+                    showSubCategories(['강릉홈']);
+                    CATEGORY_STATUS = 2;
+                }else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('군산')) {
+                    showSubCategories(['군산홈']);
+                    CATEGORY_STATUS = 2;
+                }else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('부산')) {
+                    showSubCategories(['부산홈','해운대']);
                     CATEGORY_STATUS = 2;
                 } else if (userMessage.toLowerCase().includes('0')  || userMessage.toLowerCase().includes('상위메뉴')) {
                     showWelcomeMessage();
@@ -80,9 +89,9 @@
                 } else if ( selectedCategory.includes('남성의류') || selectedCategory.includes('미국')) {
                     sendSubCategoryMessage(selectedCategory, ['맛집', '교통', '숙소', '관광지', '날씨정보']);
                     showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
-                } else if (userMessage === '0') {
+                } else if (userMessage.toLowerCase().includes('0')  || userMessage.toLowerCase().includes('상위메뉴')) {
                     showWelcomeMessage();
-                    CATEGORY_STATUS = 1;
+                    CATEGORY_STATUS = 2;
                 } else {
                     // 다른 키워드에 대한 기본 응답
                     appendMessage('<br>Chatbot', '<br>죄송합니다. 입력하신 정보로는 처리할 수 없습니다.<br>');

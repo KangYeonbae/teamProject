@@ -1,6 +1,7 @@
-(function () {
+
+$(function () {
     const spanEl = document.querySelector("main h2 span");
-    const txtArr = ['Go Trip!', 'Korea', '여행!'];
+    const txtArr = ['Go Trip!', 'Go Korea Trip!!', 'Go 여행!'];
     let index = 0;
     let currentTxt = txtArr[index].split("");
 
