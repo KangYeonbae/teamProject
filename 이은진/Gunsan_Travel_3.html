@@ -3,10 +3,10 @@
 <head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시간테마여행 안내</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
@@ -14,6 +14,7 @@
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/card_style.css">
 
     <style>
         .bd-placeholder-img {
@@ -41,11 +42,10 @@
 
         section {
             position:relative;
-            background-image: url("images/1.jpg");
-            background-size: 1024px;
-            height: 400px;
+            background-image: url("images/3.jpg");
+            background-color: rgba(255,255,255,0.5%);
             background-repeat: no-repeat;
-            background-position: center top;
+            background-position: center;
         }
 
         section p {
@@ -129,15 +129,12 @@
             background-color: gray;
             font-weight: bold;
         }
-        .rounded-top {
-            border-top-left-radius: 2px; /* 좌측 상단 둥글게 */
-            border-top-right-radius: 2px; /* 우측 상단 둥글게 */
-            overflow: hidden; /* 둥글게 만들기 위해 오버플로우 숨김 */
-        }
-
         .card-text1 {
             font-size: 20px;
             font-weight: bold;
+        }
+        .chaShadow {
+            text-shadow: 2px 2px 2px #fff;
         }
     </style>
     <script>
@@ -166,7 +163,31 @@
             });
         }
     </script>
+    <script>
+        // JavaScript로 이벤트를 처리하는 부분입니다.
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모든 이미지 요소를 가져옵니다.
+            var imageContainers = document.querySelectorAll('.card');
 
+            // 각 이미지에 대한 이벤트를 등록합니다.
+            imageContainers.forEach(function (container) {
+                var roundedTop = container.querySelector('.roundedTop');
+                var overlayImage = container.querySelector('.overlayImage');
+
+                container.addEventListener('mouseover', function () {
+                    // 오버레이 이미지를 보여주고, 기존 이미지를 숨깁니다.
+                    overlayImage.style.display = 'block';
+                    roundedTop.style.display = 'none';
+                });
+
+                container.addEventListener('mouseout', function () {
+                    // 기존 이미지를 보여주고, 오버레이 이미지를 숨깁니다.
+                    overlayImage.style.display = 'none';
+                    roundedTop.style.display = 'block';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <header data-bs-theme="dark">
@@ -209,12 +230,11 @@
 <main>
     <section class="py-5 text-center container">
         <h1><strong>시간여행테마</strong></h1><br>
-        <p><mark>금강(錦江)은 전라북도의 장수군에서 발원하여<br>
-            충청남도의 논산시에 있는 강경읍에서부터<br>
-            충청남도·전라북도의 도계를 이루며<br>
-            군산만으로 흘러드는 유로연장 397.79㎞의 강입니다.<br><br>
-            대한민국(남한 기준)의 국가하천 중에서<br>
-            본류 기준, 길이와 유역면적 공히 3위의 강입니다.</mark>
+        <p class="chaShadow">시간과 공간을 넘나드는 특별한 경험!<br>
+            수탈의 아픔과 이에 항거하는 열정의 도시<br>
+            일제강점기의 근대문화를 상상해볼 수 있는 군산<br>
+            올바른 역사관을 정리하는<br>
+            뜻 깊은 시간여행을 떠나보시기 바랍니다.
         </p>
         <p>
             <button class="box1" onclick="scrollToPage1()">관광지 안내</button>&nbsp;
