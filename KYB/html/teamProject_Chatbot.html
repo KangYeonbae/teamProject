@@ -62,13 +62,13 @@
                     showSubCategories(['서울홈', '경복궁']);
                     CATEGORY_STATUS = 2;
                 } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('강릉')) {
-                    showSubCategories(['강릉홈']);
+                    showSubCategories(['강릉홈', '맛집']);
                     CATEGORY_STATUS = 2;
                 }else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('군산')) {
-                    showSubCategories(['군산홈']);
+                    showSubCategories(['군산홈', '금강권', '시간여행테마']);
                     CATEGORY_STATUS = 2;
                 }else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('부산')) {
-                    showSubCategories(['부산홈','해운대']);
+                    showSubCategories(['부산홈','감천마을','해운대']);
                     CATEGORY_STATUS = 2;
                 } else if (userMessage.toLowerCase().includes('0')  || userMessage.toLowerCase().includes('상위메뉴')) {
                     showWelcomeMessage();
@@ -84,9 +84,9 @@
                 // 사용자가 하위 카테고리에 대해 물어보는 경우
                 const selectedCategory = userMessage.toLowerCase();
                 if (selectedCategory.includes('1') || selectedCategory.includes('2') || selectedCategory.includes('3')|| selectedCategory.includes('4')) {
-                    sendSubCategoryMessage(selectedCategory, ['맛집', '교통', '숙소', '관광지', '날씨정보']);
-                    showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
-                } else if ( selectedCategory.includes('남성의류') || selectedCategory.includes('미국')) {
+                    sendSubCategoryMessage(selectedCategory, ['서울홈', '경복궁']);
+                    showSubCategories(['서울홈 으로 안내해드릴께요', '경복궁']);
+                } else if ( selectedCategory.includes('강릉') || selectedCategory.includes('강릉홈')) {
                     sendSubCategoryMessage(selectedCategory, ['맛집', '교통', '숙소', '관광지', '날씨정보']);
                     showSubCategories(['맛집', '교통', '숙소', '관광지', '날씨정보']);
                 } else if (userMessage.toLowerCase().includes('0')  || userMessage.toLowerCase().includes('상위메뉴')) {
@@ -94,8 +94,10 @@
                     CATEGORY_STATUS = 2;
                 } else {
                     // 다른 키워드에 대한 기본 응답
+                    setTimeout(function(){
                     appendMessage('<br>Chatbot', '<br>죄송합니다. 입력하신 정보로는 처리할 수 없습니다.<br>');
                 }
+
             }
 
             userInput.val('');
