@@ -72,6 +72,10 @@ section .about-self .left .slide_gallery{
     float: none;
 }
 .bigPicture img{
+    margin: 20px;
     width: 1000px;
     height: 900px;
+}
+footer{
+    text-align: center;
 }

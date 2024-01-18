@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부산 여행안내</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="busanstyle23%20(2).css">
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <style>
+
+        #gallery_wrap {
+            margin: 20px auto; /* 조정 가능한 여백 값 */
+            width: 80%; /* 조정 가능한 너비 값 */
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".slide_gallery").bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true
+            })
+        });
+    </script>
+
+</head>
+<body>
+<header>
+    <h1>부산 여행안내</h1>
+</header>
+<nav>
+    <a href="">메인으로</a>
+    <a href="#about">부산 소개</a>
+    <a href="#tourist-spots">인기 관광지</a>
+    <a href="#food">맛집</a>
+    <a href="#accommodation">숙소</a>
+</nav>
+
+<div class="back">
+    <div class="header">
+        <h1>부산소개</h1>
+        <h2>부산은 대한민국 제2의 수도로 불리며, 해운대, 감천문화마을, 광안리 등 다양한 관광지와 맛집, 숙소가 있는 도시입니다</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="goodPlace">
+        <div class="about-self">
+            <div class="tourist-spot">
+                <div id="gallery_wrap" style="width: 300px; height: 300px;" class="slide_gallery">
+                    <a><img src="../images/haeundaebackground.jpg" alt="사진1"></a>
+                    <a><img src="../images/haeundae.jpg" alt="사진2"></a>
+                </div>
+        <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%EB%A7%88%EC%9D%B4%EB%A7%88%EC%9D%B4/place/1611468087?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+            <h3 class="name">마이마이</h3>
+            <p>강릉 대표 우육면!</p>
+            <p>항상 엄청난 웨이팅과 언제나 재료소진으로인한 조기마감!</p>
+        </a>
+        </div>
+     </div>
+    </div>
+    <div class="goodPlace">
+        <div class="about-self">
+            <div class="tourist-spot">
+                <div id="gallery_wrap" class="slide_gallery">
+                    <a><img src="../images/gamcheon.jpg" alt="사진1"></a>
+                    <a><img src="../images/b612.png" alt="사진2"></a>
+                </div>
+        <a href="https://map.naver.com/p/entry/place/1938856872?lng=128.9404725131614&lat=37.76517756406241&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh">
+            <h3>리틀 다이너</h3>
+            <p>강릉속의 작은 미국</p>
+            <p>음식에서 느껴지는 미국의맛! 기본웨이팅 30분이상!</p>
+        </a>
+            </div>
+        </div>
+    </div>
+    <div class="goodPlace">
+        <div class="about-self">
+            <div class="tourist-spot">
+                <div id="gallery_wrap" class="slide_gallery">
+                    <a><img src="../images/gwangalli.jpg" alt="사진1"></a>
+                    <a><img src="../images/bridge.jpg" alt="사진2"></a>
+                </div>
+        <img src="../imges/food.jpg" class="goodPlace_3">
+        <a href="https://map.naver.com/p/entry/place/11859878?lng=128.91463730000387&lat=37.79117970090872&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh">
+            <h3>동화가든</h3>
+            <p>강릉 초당순두부 원조집</p>
+            <p>여전한 명성! 순두부백반시키면 반찬이 많아지니 꼭하나 같이시켜요!</p>
+        </a>
+        <table id="stockTable_2">
+            <tr>
+                <th>웨이팅</th>
+                <th>대기팀</th>
+                <th>대기시간</th>
+            </tr>
+            <tr>
+                <td>동화가든</td>
+                <td id="waiting_team_2">5</td>
+                <td id="waiting_time_2">30</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div class="mText">
+        <h2>숙소</h2>
+    </div>
+    <div class = "goodPlace">
+        <div class="about-self">
+        <div class="tourist-spot">
+            <div id="gallery_wrap" class="slide_gallery">
+                <a><img src="../images/noodle.png" alt="사진1"></a>
+                <a><img src="../images/theplate.png" alt="사진2"></a>
+            </div>
+        <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+            <h3>툇마루</h3>
+            <p>흑임자 커피로 유명한 그곳!</p>
+            <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+        </a>
+         </div>
+        </div>
+    </div>
+    <div class = "goodPlace"><div class="about-self">
+        <div class="tourist-spot">
+            <div id="gallery_wrap" class="slide_gallery">
+                <a><img src="../images/galsam.png" alt="사진1"></a>
+                <a><img src="../images/b612.png" alt="사진2"></a>
+            </div>
+            <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+                <h3>툇마루</h3>
+                <p>흑임자 커피로 유명한 그곳!</p>
+                <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+            </a>
+        </div>
+    </div>
+    </div>  <div class = "goodPlace"><div class="about-self">
+    <div class="tourist-spot">
+        <div id="gallery_wrap" class="slide_gallery">
+            <a><img src="../images/noodle.png" alt="사진1"></a>
+            <a><img src="../images/galsam.png" alt="사진2"></a>
+        </div>
+        <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+            <h3>툇마루</h3>
+            <p>흑임자 커피로 유명한 그곳!</p>
+            <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+        </a>
+
+    </div>
+</div>
+</div>
+</div>
+<div class="container">
+            <div class="mText">
+                <h2>숙소</h2>
+            </div>
+            <div class = "goodPlace">
+                <div class="about-self">
+                    <div class="tourist-spot">
+                        <div id="gallery_wrap" class="slide_gallery">
+                            <a><img src="../images/noodle.png" alt="사진1"></a>
+                            <a><img src="../images/theplate.png" alt="사진2"></a>
+                        </div>
+                        <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+                            <h3>툇마루</h3>
+                            <p>흑임자 커피로 유명한 그곳!</p>
+                            <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "goodPlace"><div class="about-self">
+                <div class="tourist-spot">
+                    <div id="gallery_wrap" class="slide_gallery">
+                        <a><img src="../images/galsam.png" alt="사진1"></a>
+                        <a><img src="../images/b612.png" alt="사진2"></a>
+                    </div>
+                    <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+                        <h3>툇마루</h3>
+                        <p>흑임자 커피로 유명한 그곳!</p>
+                        <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+                    </a>
+                </div>
+            </div>
+            </div>  <div class = "goodPlace"><div class="about-self">
+            <div class="tourist-spot">
+                <div id="gallery_wrap" class="slide_gallery">
+                    <a><img src="../images/noodle.png" alt="사진1"></a>
+                    <a><img src="../images/galsam.png" alt="사진2"></a>
+                </div>
+                <a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%ED%88%87%EB%A7%88%EB%A3%A8/place/998885728?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">
+                    <h3>툇마루</h3>
+                    <p>흑임자 커피로 유명한 그곳!</p>
+                    <p>오픈런을해도 힘들다고하니 겨울과 여름엔 차량필수</p>
+                </a>
+
+            </div>
+        </div>
+        </div>
+        </div>
+<footer>
+    <p>2024 부산 여행안내</p>
+</footer>
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<script src="../busan.js"></script>
+<!--<script src="../busnaboxslider.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부산 여행안내</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!--    <script src="js/jquery.js"></script>-->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="../busanstyle.css">
+    <!--    <link rel="stylesheet" href="../busanboxslider.css">-->
+    <link rel="stylesheet" href="../css/jquery.bxslider.min.css">
+    <style>
+        *{margin: 0;padding: 0;}
+        #gallery_wrap{
+            margin: 0 auto;
+            width: 80%;
+            max-width: 640px;
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $('.slide_gallery').bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true
+            });
+        });
+    </script>
+
+</head>
+<body>
+<header>
+    <h1>부산 여행안내</h1>
+</header>
+<nav>
+    <a href="">메인으로</a>
+    <a href="#about">부산 소개</a>
+    <a href="#tourist-spots">인기 관광지</a>
+    <a href="#food">맛집</a>
+    <a href="#accommodation">숙소</a>
+</nav>
+<section id="about">
+    <h2>부산 소개</h2>
+    <p>부산은 대한민국 제2의 수도로 불리며, 해운대, 감천문화마을, 광안리 등 다양한 관광지와 맛집, 숙소가 있는 도시입니다.</p>
+</section>
+<section id="tourist-spots">
+    <h2>인기 관광지</h2>
+                <div class="tourist-spot">
+                    <div id="gallery_wrap" class="slide_gallery">
+                        <ul>
+                            <li><img src="images/haeundaebackground.jpg" alt="사진1"></li>
+                            <li><img src="images/haeundae.jpg" alt="사진2"></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="tourist-spot">
+                    <img src="images/gamcheon.jpg" alt="감천문화마을 사진">
+                    <p><a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EA%B0%90%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84/place/21884707?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                        감천문화마을</a></p>
+                </div>
+                <div class="tourist-spot">
+                    <img src="images/bridge.jpg" alt="광안리 사진">
+                    <p><a href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC/place/11491655?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                        광안리</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="food">
+    <h2>맛집</h2>
+    <div class="food-container">
+        <div class="food-item">
+            <img src="../images/noodle.png" alt="부산의 대표 음식 1 사진">
+            <p><a href="https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%20%EA%B0%80%EC%95%BC%EB%B0%80%EB%A9%B4/place/20430372?c=13.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                가야밀면</a></p>
+        </div>
+        <div class="food-item">
+            <img src="../images/galsam.png" alt="부산의 대표 음식 2 사진">
+            <p><a href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%20%EA%B0%88%EC%82%BC%EA%B5%AC%EC%9D%B4/place/38015046?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                광안리 갈삼구이</a></p>
+        </div>
+        <div class="food-item">
+            <img src="../images/b612.png" alt="부산의 대표 음식 3 사진">
+            <p><a href="https://map.naver.com/p/search/%EC%86%8C%ED%96%89%EC%84%B1b612/place/1172350461?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                소행성 B612카페</a></p>
+        </div>
+    </div>
+</section>
+<section id="accommodation">
+    <h2>숙소</h2>
+    <div class="accommodation-container">
+        <div class="accommodation-item">
+            <img src="../images/paradise.png" alt="호텔 1 사진">
+            <p><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4+%ED%98%B8%ED%85%94+%EB%B6%80%EC%82%B0&oquery=%EA%B0%88%EC%82%BC%EA%B5%AC%EC%9D%B4&tqi=ijhV1sqVN8wssc0kl6hssssstQd-049956">
+                파라다이스 호텔 부산</a></p>
+        </div>
+        <div class="accommodation-item">
+            <img src="../images/grandjosunbusan.png" alt="호텔 2 사진">
+            <p><a href="https://map.naver.com/p/search/%EA%B7%B8%EB%9E%9C%EB%93%9C%EC%A1%B0%EC%84%A0%20%EB%B6%80%EC%82%B0/place/1016404332?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                그랜드 조선 부산</a></p>
+        </div>
+        <div class="accommodation-item">
+            <img src="../images/kenthotel.png" alt="호텔 3 사진">
+            <p><a href="https://map.naver.com/p/search/%EC%BC%84%ED%8A%B8%ED%98%B8%ED%85%94%20%EA%B4%91%EC%95%88%EB%A6%AC/place/37750119?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                켄트호텔 광안리</a></p>
+        </div>
+    </div>
+</section>
+<div>
+    <canvas id="touristEstimation" width="1000" height="800"></canvas>
+</div>
+<div>
+    <canvas id="areaTourist" width= "800" height="200"></canvas>
+</div>
+
+<footer>
+    <p>2024 부산 여행안내</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../busan.js"></script>
+<!--<script src="../busnaboxslider.js"></script>-->
+</body>
+</html>

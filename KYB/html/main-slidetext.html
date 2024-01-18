@@ -8,8 +8,25 @@
     <title>main</title>
     <script src="https://kit.fontawesome.com/a4dc7026e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/maintest.css">
 <link rel="stylesheet" href="../css/chat.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".slider img");
+            let counter = 0;
+            const interval = 3000;
+
+            function startFadeInOut() {
+                setInterval(() => {
+                    images[counter].style.opacity = 0; // Fade out the current image
+                    counter = (counter + 1) % images.length; // Move to the next image
+                    images[counter].style.opacity = 1; // Fade in the next image
+                }, interval);
+            }
+
+            startFadeInOut();
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar-bottom">
@@ -48,6 +65,13 @@
 </nav>
 
 <main id="main">
+    <div class = background-slider>
+        <div class="slider">
+            <img src="../imges/mainbackground.jpg" alt="image1">
+            <img src="../imges/mainbackground1.jpg" alt="image1">
+            <img src="../imges/mainbackground2.jpg" alt="image1">
+            <img src="../imges/mainbackground3.jpg" alt="image1">
+        </div>
     <div class="container">
         <h4>Welcome</h4>
         <h2>Let's <span></span></h2>
@@ -82,6 +106,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 <!--<div class="button">-->

@@ -1,0 +1,198 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #495057;
+}
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+section p {
+    text-align: center;
+}
+section h2 {
+    text-align: center;
+}
+section div {
+    list-style: none;
+    margin: 10px 0;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+section ul li img {
+    width: 450px;
+    height: 600px;
+}
+section li {
+    margin: 10px 0;
+    flex: 0 0 30%;
+}
+
+.box-slider-container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.tourist-spot {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 700px;
+    margin: 20px 10px;
+    padding: 10px;
+}
+.food-item{
+    /*text-align: center;*/
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+    /*box-sizing: border-box;*/
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 700px;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+.accommodation-item {
+    /*text-align: center;*/
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+    /*box-sizing: border-box;*/
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 700px;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+.tourist-spot img {
+    width: 450px;
+    height: 600px;
+    /*max-width: 100%;*/
+    border-radius: 10px;
+}
+
+.food-item img {
+    width: 450px;
+    height: 600px;
+    /*max-width: 100%;*/
+    border-radius: 10px;
+}
+.accommodation-item img {
+    width: 90%;
+    height: 90%;
+    /*max-width: 100%;*/
+    border-radius: 10px;
+}
+.tourist-spot p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.food-item p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.accommodation-item p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+div {
+    display: inline-block;
+    margin: 20px;
+}
+/**{margin: 0;padding: 0;}*/
+/*#gallery_wrap{*/
+/*    margin: 0 auto;*/
+/*    width: 450px;*/
+/*}*/
+.slide_gallery {
+    width: 450px; /* 슬라이더의 너비 조절 */
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 슬라이드 애니메이션을 위한 트랜지션 속성 */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* 좌우 화살표 스타일링 */
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #333;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+
+.about-self .left {
+    float: left;
+    width: 30%;
+}
+section .about-self .left .slide_gallery{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 350px;
+}
+.slide_gallery .a{
+    width: auto;
+}
+.container_chart div{
+    width: auto;
+    display: flex;
+}
