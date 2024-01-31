@@ -3,10 +3,10 @@
 <head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>개정면/임피면 안내</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
@@ -14,6 +14,7 @@
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/card_style.css">
 
     <style>
         .bd-placeholder-img {
@@ -41,9 +42,7 @@
 
         section {
             position:relative;
-            background-image: url("images/1.jpg");
-            background-size: 1024px;
-            height: 400px;
+            background-image: url("images/4.jpg");
             background-repeat: no-repeat;
             background-position: center top;
         }
@@ -129,15 +128,12 @@
             background-color: gray;
             font-weight: bold;
         }
-        .rounded-top {
-            border-top-left-radius: 2px; /* 좌측 상단 둥글게 */
-            border-top-right-radius: 2px; /* 우측 상단 둥글게 */
-            overflow: hidden; /* 둥글게 만들기 위해 오버플로우 숨김 */
-        }
-
         .card-text1 {
             font-size: 20px;
             font-weight: bold;
+        }
+        .chaShadow {
+            text-shadow: 2px 2px 2px #fff;
         }
     </style>
     <script>
@@ -166,7 +162,31 @@
             });
         }
     </script>
+    <script>
+        // JavaScript로 이벤트를 처리하는 부분입니다.
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모든 이미지 요소를 가져옵니다.
+            var imageContainers = document.querySelectorAll('.card');
 
+            // 각 이미지에 대한 이벤트를 등록합니다.
+            imageContainers.forEach(function (container) {
+                var roundedTop = container.querySelector('.roundedTop');
+                var overlayImage = container.querySelector('.overlayImage');
+
+                container.addEventListener('mouseover', function () {
+                    // 오버레이 이미지를 보여주고, 기존 이미지를 숨깁니다.
+                    overlayImage.style.display = 'block';
+                    roundedTop.style.display = 'none';
+                });
+
+                container.addEventListener('mouseout', function () {
+                    // 기존 이미지를 보여주고, 오버레이 이미지를 숨깁니다.
+                    overlayImage.style.display = 'none';
+                    roundedTop.style.display = 'block';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <header data-bs-theme="dark">
@@ -209,12 +229,11 @@
 <main>
     <section class="py-5 text-center container">
         <h1><strong>개정 / 임피</strong></h1><br>
-        <p><mark>금강(錦江)은 전라북도의 장수군에서 발원하여<br>
-            충청남도의 논산시에 있는 강경읍에서부터<br>
-            충청남도·전라북도의 도계를 이루며<br>
-            군산만으로 흘러드는 유로연장 397.79㎞의 강입니다.<br><br>
-            대한민국(남한 기준)의 국가하천 중에서<br>
-            본류 기준, 길이와 유역면적 공히 3위의 강입니다.</mark>
+        <p class="chaShadow">본래 군산은 현재의 옛도심을 '옥구군'으로 불렸으며<br>
+            옥구군과 함께 '임피군'으로 나뉘어져 있었습니다.<br><br>
+            일제강점기 시절에는 임피군을 옥구군으로 불리다<br>
+            독립 후 군산과 옥구로 나누어 불려지다<br>
+            1995년 이후로 군산으로 통합되어 있습니다.
         </p>
         <p>
             <button class="box1" onclick="scrollToPage1()">관광지 안내</button>&nbsp;
@@ -232,91 +251,49 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img class="roundedTop" src="images/japaneseRiceLocker.jpg">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text1">군산 발산리 구 일본인 농장창고</p>
+                            <p class="card-text">1920년대에 군산지역의 대표적인 농장주였던 시마타니 야소야가 귀중품을 보관하기 위해 만든 금고형 건물입니다.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2127/view/305633?">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/17509941?c=17.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14115018.8182152,4295003.5801811,%EA%B5%B0%EC%82%B0%EA%B0%9C%EC%A0%95%EB%A9%B4%EA%B5%AC%EC%9D%BC%EB%B3%B8%EC%9D%B8%EB%86%8D%EC%9E%A5%EC%B0%BD%EA%B3%A0,17509941,PLACE_POI/-/transit?c=17.00,0,0,0,dh">길찾기</a></button>
                                 </div>
-                                <small class="text-body-secondary">9 mins</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img class="roundedTop" src="images/balsan5thRocktower.jpg">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text1">발산리 오층석탑</p>
+                            <p class="card-text">고려 전기의 것으로 추정되는 이 석탑은 높이가 6.4m이고, 2층 기단위에 5층의 탑신을 올린 형태였으나 지금은 탑신의 한 층이 없어지고 4층만 남아있습니다.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2322">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103572?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14114910.6823969,4294996.4287623,%EB%B0%9C%EC%82%B0%EB%A6%AC%EC%98%A4%EC%B8%B5%EC%84%9D%ED%83%91,20103572,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
                                 </div>
-                                <small class="text-body-secondary">9 mins</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img class="roundedTop" src="images/KumamotoHouse.jpg">
+                        <img class="overlayImage" src="images/LYCHouse.gif">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text1">이영춘 가옥</p>
+                            <p class="card-text">1920년경에 일본인 대지주 구마모토가 지은 별장으로 서구식과 일본식, 한식의 절충양식 건물로 해방 후에는 개정병원 원장이었던 이영춘 박사가 거주하면서 현재의 이름을 갖게 되었습니다. </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2127/view/305632?">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103620?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14110854.8903176,4296626.2208563,%EC%9D%B4%EC%98%81%EC%B6%98%EA%B0%80%EC%98%A5,20103620,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
                                 </div>
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-body-secondary">9 mins</small>
                             </div>
                         </div>
                     </div>
@@ -324,45 +301,36 @@
 
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img class="roundedTop" src="images/ImpiHyanggyo.jpg">
+                        <img class="overlayImage" src="images/ImpiSchool.gif">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text1">임피향교</p>
+                            <p class="card-text">임피향교는 임피면 읍내리에 있는데 조선시대 관리들의 업적을 알리는 비석이 입구에 많이 있습니다.<br>
+                                최근에 보수도 많이하고 단장을 해서 옛 모습이 사라졌다고 하지만 옛날 선비들이 공부하던 모습을 떠올리기에 부족함이 없이 잘 정돈된 향교입니다. </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2314">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/17506708?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14120667.84502,4298978.7792999,%EC%9E%84%ED%94%BC%ED%96%A5%EA%B5%90,17506708,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
                                 </div>
-                                <small class="text-body-secondary">9 mins</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img class="roundedTop" src="images/Impistation.jpg">
+                        <img class="overlayImage" src="images/ImpiHistory.gif">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text1">임피역사</p>
+                            <p class="card-text">일제강점기 전라도 농산물을 군산항을 통하여 일본으로 반출하는 중요 교통로의 역할을 담당한 수탈의 아픈 역사를 지닌 역입니다.<br>
+                                2002년에 등록문화재 제 208호로 지정된 「임피역」은 건축 당시 농촌지역 소규모 간이역사의 전형적 건축형식과 기법을 잘 보여주며, 원형이 비교적 잘 보존되어 있고 현재는 객차전시관·시실리광장·방죽공원을 조성하고 재래식화장실·우물터·오포대 등을 만들어서 이 고장 출신 소설가 채만식의 작품의 이야기와 엮어서 관광객들의 사랑을 받고 있습니다.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2318">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103563?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14122452.7115048,4294288.6956991,%EC%9E%84%ED%94%BC%EC%97%AD%EC%82%AC%20%EA%B0%84%EC%9D%B4%EC%97%AD,20103563,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
                                 </div>
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-body-secondary">9 mins</small>
                             </div>
                         </div>
                     </div>
