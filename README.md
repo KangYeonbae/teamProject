@@ -42,6 +42,8 @@
 #### 메인페이지
 <img src="P_imgaes/4.gif" alt="메인">
 
+![main](P_imgaes/4.gif)
+
 ![MainPage](P_imgaes/2.jpg)  
 1. 슬라이드 네비게이션바 제작
      - 마우스를 가져가면 내려오는 네비게이션바.
