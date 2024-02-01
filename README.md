@@ -40,7 +40,7 @@
 ### 강연배 담당업무
 > 메인페이지와 강릉 지역을 맡아 제작하였습니다.
 #### 메인페이지
-<img src="P_imgaes/1.gif" alt="메인" width="700px" height="500px">
+<img src="P_imgaes/1.gif" alt="메인" width="650px" height="450px">
 
 ![MainPage](P_imgaes/2.jpg)  
 
