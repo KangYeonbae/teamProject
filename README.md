@@ -40,8 +40,6 @@
 ### 강연배 담당업무
 > 메인페이지와 강릉 지역을 맡아 제작하였습니다.
 #### 메인페이지
-<img src="P_imgaes/4.gif" alt="메인">
-
 ![main](P_imgaes/4.gif)
 
 ![MainPage](P_imgaes/2.jpg)  
