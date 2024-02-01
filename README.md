@@ -4,8 +4,6 @@
 ### 팀원 강연배, 배호진, 이은진, 장준희
 
 > 프로젝트 개요  
-
-###사용한 프론드엔드 기술
 ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white)
 ![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white)
