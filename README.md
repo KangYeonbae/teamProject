@@ -4,13 +4,9 @@
 ### 팀원 강연배, 배호진, 이은진, 장준희
 
 > 프로젝트 개요  
+   
+23년 12월 21일 첫수업을 시작으로 약 3주동안 배운
 ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white)
-![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white)
-![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white)
-![JQuery Badge](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)
-
-```   
-23년 12월 21일 첫수업을 시작으로 약 3주동안 배운 HTML, CSS, JS, ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white)
 ![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white)
 ![JQuery Badge](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)
@@ -19,7 +15,7 @@
 
 저희팀은 "여행" 이라는 주제의 페이지를 제작하였으며,
 각 조원별로 원하는 지역을 맡아 각자의 페이지를 완성하였습니다.
-```
+
 
 ### 장준희 담당업무
 #### 서울
