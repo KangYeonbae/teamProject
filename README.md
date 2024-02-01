@@ -42,7 +42,7 @@
 > 메인페이지와 강릉 지역을 맡아 제작하였습니다.
 #### 메인페이지
 ![MainPage](P_imgaes/2.jpg)
-![mainpagevi](p_imgaes/Mainpage.mp4)
+[mainpagevi](p_imgaes/Mainpage.mp4)
 - 1. 슬라이드 네비게이션바 제작
      - 마우스를 가져가면 내려오는 네비게이션바.
      - 선택하고있는 곳의 글자 색상이 변합니다.
