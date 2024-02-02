@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,24 @@
                     $(".content").removeClass("expanded");
                 }
             });
+        });
+        $(document).ready(function() {
+            var images = [
+                './images/seoul-night.jpg',
+                './images/sea.jpg',
+                './images/kumRiverFuture.jpg',
+                './images/prince.jpg'
+            ];
+            var currentImageIndex = 0;
+
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                $('.container2').css('background-image', 'url(' + images[currentImageIndex] + ')');
+            }
+
+            $('.container2').css('background-image', 'url(' + images[currentImageIndex] + ')');
+
+            setInterval(changeImage, 2500);
         });
     </script>
 </head>
@@ -66,7 +84,7 @@
     </nav>
 </div>
 
-<main id="main">
+<header id="header">
     <div class="container1">
         <h4>Welcome</h4>
         <h2>Let's <span></span></h2>
@@ -101,6 +119,14 @@
                 </div>
             </div>
         </div>
+    </div>
+</header>
+<main id="main">
+    <div class = "container2" id="container2">
+<div class="chart">
+    <canvas id = "myChart"></canvas>
+</div>
+    </div>
     </div>
 </main>
 <script src="js/main.js"></script>
