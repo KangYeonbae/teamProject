@@ -13,20 +13,33 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/chat.css">
     <script src="https://kit.fontawesome.com/a4dc7026e0.js" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+
+            $(".btn3").on("click", function( ) {
+                $(".content").slideToggle(1000, "linear");
+            });
+
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom">
     <div class="container">
         <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
             <ul class="navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item"><a class="nav-link" href="main.html"><h2>Trip</h2></a></li>
+                <li class="nav-item"><a class="nav-link" href="main.html"><h2>Trip</h2></a>
+                   <ul class = sub-nav>
+                    <li class="nav-item"><a class="nav-link" href="../../장준희/login.html">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../장준희/register.html">회원가입</a></li>
+                   </ul>
                 <li class="nav-item"><a class="nav-link" href="../../장준희/main_seoul.html"><h2>서울</h2></a>
                     <ul class = sub-nav>
                         <li class="nav-item"><a class="nav-link" href="../../장준희/nav_goong.html">경복궁</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">광장시장</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">남산</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">롯데월드</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">DDP</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../장준희/nav_market.html">광장시장</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../장준희/nav_namsan.html">남산</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../장준희/nav_lotteworld.html">롯데월드</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../장준희/nav_DDP.html">DDP</a></li>
                     </ul>
                 <li class="nav-item"><a class="nav-link" href="main2.html"><h2>강릉</h2></a>
                     <ul class = sub-nav>
@@ -39,7 +52,7 @@
                         <li class="nav-item"><a class="nav-link" href="../../이은진/Gunsan_Travel_2.html">고군산군도</a></li>
                         <li class="nav-item"><a class="nav-link" href="../../이은진/Gunsan_Travel_4.html">개정/임피</a></li>
                     </ul>
-                <li class="nav-item"><a class="nav-link" href="../../부산/1차_프로젝트_부산.html"><h2>부산</h2></a>
+                <li class="nav-item"><a class="nav-link" href="../../부산/부산파일/부산여행_final.html"><h2>부산</h2></a>
                     <ul class = sub-nav>
                         <li class="nav-item"><a class="nav-link" href="../../부산/부산_해운대.html">해운대</a></li>
                         <li class="nav-item"><a class="nav-link" href="../../부산/감천문화마을.html">감천마을</a></li>
@@ -56,9 +69,6 @@
         <h2>Let's <span></span></h2>
         <p>아름다운 국내여행! 어느곳으로 떠나볼까요?</p>
         <div class="chat-bar collapsed">
-            <button id="chat-button" type="button" class="download">Chat with us!
-                <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
-            </button>
             <div class="content">
                 <div class="full-chat-block">
                     <div class="outer-container">
@@ -91,5 +101,6 @@
 <script src="../js/main.js"></script>
 <script src="../js/chat.js"></script>
 <script src="../js/Reply.js"></script>
+<script src="js/jquery.js"></script>
 </body>
 </html>

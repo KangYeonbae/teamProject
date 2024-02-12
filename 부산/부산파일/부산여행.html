@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../busanstyle.css">
     <title>부산 여행안내</title>
+    <link rel="stylesheet" href="../busanstyle21.css">
+<!--    <link rel="stylesheet" href="../busanboxslider.css">-->
 </head>
 <body>
 <header>
@@ -23,22 +24,21 @@
 </section>
 <section id="tourist-spots">
     <h2>인기 관광지</h2>
-    <div class="box-slider-container">
-        <div class="slider">
-            <div class="slide">
-                <div class="tourist-spot">
-                    <img src="images/haeundaebackground.jpg" alt="해운대 사진"><br>
-                    <p><a href="#">해운대</a></p>
-                </div>
-                <div class="tourist-spot">
-                    <img src="images/gamcheon.jpg" alt="감천문화마을 사진">
-                    <p><a href="#">감천문화마을</a></p>
-                </div>
-                <div class="tourist-spot">
-                    <img src="images/bridge.jpg" alt="광안리 사진">
-                    <p><a href="#">광안리</a></p>
-                </div>
-            </div>
+    <div class="tourist-spot-container">
+        <div class="tourist-spot">
+             <img src="images/haeundaebackground.jpg" alt="해운대 사진1">
+             <p><a href="https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80/place/13491921?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                   해운대</a></p>
+        </div>
+        <div class="tourist-spot">
+            <img src="images/gamcheon.jpg" alt="감천문화마을 사진">
+            <p><a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EA%B0%90%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84/place/21884707?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                   감천문화마을</a></p>
+        </div>
+        <div class="tourist-spot">
+            <img src="images/bridge.jpg" alt="광안리 사진">
+            <p><a href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC/place/11491655?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                   광안리</a></p>
         </div>
     </div>
 </section>
@@ -47,15 +47,18 @@
     <div class="food-container">
         <div class="food-item">
             <img src="../images/noodle.png" alt="부산의 대표 음식 1 사진">
-            <p><a href="#">가야밀면</a></p>
+            <p><a href="https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%20%EA%B0%80%EC%95%BC%EB%B0%80%EB%A9%B4/place/20430372?c=13.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                가야밀면</a></p>
         </div>
         <div class="food-item">
             <img src="../images/galsam.png" alt="부산의 대표 음식 2 사진">
-            <p><a href="#">광안리 갈삼구이</a></p>
+            <p><a href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%20%EA%B0%88%EC%82%BC%EA%B5%AC%EC%9D%B4/place/38015046?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                광안리 갈삼구이</a></p>
         </div>
         <div class="food-item">
             <img src="../images/b612.png" alt="부산의 대표 음식 3 사진">
-            <p><a href="#">소행성 B612</a></p>
+            <p><a href="https://map.naver.com/p/search/%EC%86%8C%ED%96%89%EC%84%B1b612/place/1172350461?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                소행성 B612카페</a></p>
         </div>
     </div>
 </section>
@@ -69,16 +72,29 @@
         </div>
         <div class="accommodation-item">
             <img src="../images/grandjosunbusan.png" alt="호텔 2 사진">
-            <p><a href="#">그랜드 조선 부산</a></p>
+            <p><a href="https://map.naver.com/p/search/%EA%B7%B8%EB%9E%9C%EB%93%9C%EC%A1%B0%EC%84%A0%20%EB%B6%80%EC%82%B0/place/1016404332?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                그랜드 조선 부산</a></p>
         </div>
         <div class="accommodation-item">
             <img src="../images/kenthotel.png" alt="호텔 3 사진">
-            <p><a href="#">켄트호텔 광안리</a></p>
+            <p><a href="https://map.naver.com/p/search/%EC%BC%84%ED%8A%B8%ED%98%B8%ED%85%94%20%EA%B4%91%EC%95%88%EB%A6%AC/place/37750119?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">
+                켄트호텔 광안리</a></p>
         </div>
     </div>
 </section>
+<div>
+    <canvas id="touristEstimation" width="1000" height="800"></canvas>
+</div>
+<div>
+    <canvas id="areaTourist" width= "800" height="200"></canvas>
+</div>
+
+
 <footer>
     <p>2024 부산 여행안내</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../busan.js"></script>
+<script src="../busnaboxslider.js"></script>
 </body>
 </html>

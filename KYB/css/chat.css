@@ -30,6 +30,7 @@ html{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
+    /*display: none;*/
 }
 
 .full-chat-block{
@@ -47,7 +48,7 @@ html{
     bottom: 0;
     left: 0;
     scroll-behavior: smooth;
-    left: 0;
+    /*left: 0;*/
     hyphens: auto;
     overflow-y: auto;
 }
